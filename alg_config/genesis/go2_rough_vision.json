@@ -1,0 +1,30 @@
+{
+    "num_steps_per_env": 24,
+    "save_interval": 100,
+    "algorithm": {
+        "name": "vision_ppo",
+        "use_vision": true,
+        "image_shape": [3, 96, 96],
+        "cnn_feature_dim": 64,
+        "num_learning_epochs": 5,
+        "num_mini_batches": 4,
+        "actor_hidden_dims": [512, 256, 128],
+        "critic_hidden_dims": [512, 256, 128],
+        "activation": "elu",
+        "init_std": 0.6,
+        "std_type": "log",
+        "learn_std": true,
+        "clip_param": 0.2,
+        "desired_kl": 0.01,
+        "entropy_coef": 0.005,
+        "gamma": 0.99,
+        "lam": 0.95,
+        "learning_rate": 0.0008,
+        "max_grad_norm": 1.0,
+        "use_clipped_value_loss": true,
+        "schedule": "adaptive",
+        "value_loss_coef": 1.0,
+        "normalize_reward": true,
+        "reward_G_max": 10.0
+    }
+}

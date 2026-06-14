@@ -1,0 +1,30 @@
+{
+    "num_steps_per_env": 1,
+    "save_interval": 100,
+    "algorithm": {
+        "name": "flashsac",
+        "actor_num_blocks": 2,
+        "actor_hidden_dim": 256,
+        "critic_num_blocks": 2,
+        "critic_hidden_dim": 256,
+        "critic_num_bins": 101,
+        "critic_min_v": -10.0,
+        "critic_max_v": 10.0,
+        "critic_target_update_tau": 0.005,
+        "temp_initial_value": 0.01,
+        "temp_target_entropy": null,
+        "actor_update_period": 2,
+        "actor_bc_alpha": 0.0,
+        "buffer": {
+            "capacity": 1000000,
+            "batch_size": 256
+        },
+        "gamma": 0.99,
+        "n_step": 1,
+        "normalize_reward": false,
+        "normalized_G_max": 10.0,
+        "use_lr_schedule": false,
+        "learning_rate": 0.0003,
+        "updates_per_iter": 1
+    }
+}
